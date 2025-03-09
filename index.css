@@ -1,0 +1,528 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0px;
+
+}
+.first-sec{
+    background:url('laptop-professional-camera-lenses-on-600nw-2470012609.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 800px;
+    padding: 10px;
+}
+
+.first-sec nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.first-sec nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color:white;
+    margin:30px;
+    margin-left: 40px;
+}
+.first-sec nav ul li a:hover{
+    color:orangered
+}
+.first-sec .firsthead{
+    float: left;
+    font-weight: bold;
+    font-family: cursive;
+    color: orangered;
+    font-style: italic;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+nav a button{
+    width: 100px;
+    height: 30px;
+    border: solid black 3px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+nav a button:hover{
+    background-color: orangered;
+}
+.note{
+    padding-left: 20px;
+}
+.note .secondhead{
+    font-size: 4rem;
+    padding-top: 200px;
+    color: white;
+}
+.note p {
+    font-size: 1.5rem;
+    color: white;
+}
+.note button{
+    border: solid black 3px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 150px;
+    height: 35px;
+    margin-top: 20px;
+}
+.note button:hover{
+    background-color: orangered;
+}
+.note button a{
+    text-decoration: none;
+}
+
+.sec-two .card-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    
+}
+.sec-two .card-section .card {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px; 
+    text-align: center;
+
+}
+
+  .sec-three{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.three-one{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.sec-three .three-one p{
+    padding-bottom: 20px;
+}
+.sec-three .three-one button{
+    width: 200px;
+    height: 40px;
+    border: solid black 3px;
+    border-radius: 10px;
+}
+.sec-three .three-one button:hover{
+    background-color: gray;
+}
+.sec-three .three-one button a{
+    font-weight: bolder;
+    font-size: 1.4rem;
+    color: black;
+    text-decoration: none;
+}
+
+/*new section two */
+.three-two{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 250px;
+}
+.three-two-section{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.sec-three .three-two{
+    padding-top: 100px;
+    float: right;
+}
+.sec-three .three-two p{
+    padding-bottom: 20px;
+}
+.sec-three .three-two button{
+    width: 300px;
+    height:40px;
+    border: solid black 3px;
+    border-radius: 10px;
+}
+.sec-three .three-two button:hover{
+    background-color: gray;
+}
+.sec-three .three-two button a{
+    font-weight: bolder;
+    font-size: 1.4rem;
+    color: black;
+    text-decoration: none;
+}
+.sec-three img{
+    float: left;
+    padding-top: none;
+    height:300px;
+    width: 500px;
+   
+}
+
+/*section three*/
+
+.three-three{
+    
+    margin-top: 100px;
+    /* padding:50px; */
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 80px;
+}
+
+.sec-three .three-three button{
+    width: 200px;
+    height: 40px;
+    border: solid black 3px;
+    border-radius: 10px;
+}
+.sec-three .three-three button:hover{
+    background-color: gray;
+}
+.sec-three .three-three button a{
+    font-weight: bolder;
+    font-size: 1.4rem;
+    color: black;
+    text-decoration: none;
+}
+.sec-three img{
+    float: right;
+    padding-top: none;
+    height:300px;
+    width: 500px;
+}
+/*section four start*/
+.sec-four{
+    padding: 100px;
+    padding-top: 3%;
+}
+.sec-four h1{
+    padding-bottom: 20px;
+}
+.sec-four .imge{
+    display: flex;
+    justify-content: space-between;
+}
+.sec-four h2{
+    padding-bottom: 5px;
+    text-align: center;
+    color: black;
+    list-style: none;
+}
+.sec-four a img{
+    height: 220px;
+    width: 400px;
+    transition: transform 0.5s ease;
+}
+.sec-four a img:hover{
+    transform: translateY(24px);
+}
+
+/*section five*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+      
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+      
+    > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+    }
+  }
+  
+  // Styling
+  
+  section {
+      background: #F4F4F4;
+      padding: 50px 0;
+  }
+  
+  .container {
+      max-width: 1044px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+  .carousel {
+      display: block;
+      text-align: left;
+      position: relative;
+      margin-bottom: 22px;
+      
+      > input {
+          clip: rect(1px, 1px, 1px, 1px);
+          clip-path: inset(50%);
+          height: 1px;
+          width: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          
+          &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+          &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+          &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+          &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+          &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+          &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+          
+          &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+      }
+  }
+  
+  .carousel__slides {
+      position: relative;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      display: flex;
+  }
+  
+  .carousel__slide {
+      position: relative;
+      display: block;
+      flex: 1 0 100%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      transition: all 300ms ease-out;
+      vertical-align: top;
+      box-sizing: border-box;
+      white-space: normal;
+      
+      figure {
+          display: flex;
+          margin: 0;
+      }
+      
+      div {
+          @include aspect-ratio(3, 2);
+          width: 100%;
+      }
+      
+      img {
+          display: block;
+          flex: 1 1 auto;
+          object-fit: cover;
+      }
+      
+      figcaption {
+          align-self: flex-end;
+          padding: 20px 20px 0 20px;
+          flex: 0 0 auto;
+          width: 25%;
+          min-width: 150px;
+      }
+      
+      .credit {
+          margin-top: 1rem;
+          color: rgba(0, 0, 0, 0.5);
+          display: block;        
+      }
+      
+      &.scrollable {
+          overflow-y: scroll;
+      }
+  }
+  
+  .carousel__thumbnails {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      
+      margin: 0 -10px;
+      
+      .carousel__slides + & {
+          margin-top: 20px;
+      }
+      
+      li {        
+          flex: 1 1 auto;
+          max-width: calc((100% / 6) - 20px);  
+          margin: 0 10px;
+          transition: all 300ms ease-in-out;
+      }
+      
+      label {
+          display: block;
+          @include aspect-ratio(1,1);
+          
+                    
+          &:hover,
+          &:focus {
+              cursor: pointer;
+              
+              img {
+                  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                  transition: all 300ms ease-in-out;
+              }
+          }
+      }
+      
+      img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+  }
+/*sign in*/
+.signin{
+    background-image: url("pexels-pixabay-458983.jpg");
+    background-size: cover;  width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;padding-top: 200PX;
+}
+
+    .signin button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      button:hover {
+        opacity: 0.8;
+      }
+      
+      /* Extra styles for the cancel button */
+      .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+      }
+      
+      /* Center the image and position the close button */
+      .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+      }
+      
+      img.avatar {
+        width: 40%;
+        border-radius: 50%;
+      }
+      
+      .container {
+        padding: 16px;
+      }
+      
+      span.psw {
+        float: right;
+        padding-top: 16px;
+      }
+      
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+      }
+      
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; 
+      }
+      
+      
+      .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: red;
+        cursor: pointer;
+      }
+      
+      /* Add Zoom Animation */
+      .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+      }
+      
+      @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+      }
+        
+      @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+      }
+      
+      /* Change styles for span and cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        span.psw {
+           display: block;
+           float: none;
+        }
+        .cancelbtn {
+           width: 100%;
+        }
+      }
+
+   

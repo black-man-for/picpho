@@ -105,6 +105,8 @@
             <div><img src="photo tools.jpeg" alt="image3"></div>
         </div>
 </div>
+
+
 <div class="sec-four">
     <h1>View Our Resourses</h1>
     <div style="display: flex;justify-content: space-evenly;">
@@ -216,7 +218,56 @@
         </div>
     </div>
 </section>
-
+<div class="buysell">
+  <div class="container">
+    <h2>Buy and Sell Photos</h2>
+    <div class="grid" id="photoList">
+        <div class="card">
+            <img src="pexels-cottonbro-9588742.jpg" alt="Sunset View">
+            <h3>Soft-lit scenes</h3>
+            <p>$10</p>
+            <button class="button" onclick="buyPhoto('Sunset View')">Buy</button>
+        </div>
+        <div class="card">
+            <img src="pexels-alexander-gluschenko-1275985538-31025225.jpg" alt="Mountain Peak">
+            <h3>Dramatic scenery shots</h3>
+            <p>$30</p>
+            <button class="button" onclick="buyPhoto('Mountain Peak')">Buy</button>
+        </div>
+    </div>
+    
+    <h3>Sell a Photo</h3>
+    <div class="form-group">
+        <input type="text" id="title" class="input" placeholder="Title">
+        <input type="number" id="price" class="input" placeholder="Price">
+        <input type="text" id="image" class="input" placeholder="Image URL">
+        <button class="button" onclick="sellPhoto()">Sell</button>
+    </div>
+</div>
+</div>
+<div class="pop">
+<h1>For Any Further Query</h1>
+<p>Reach us </p>
+  <body>
+    <button onclick="openPopup()" style="height: 50px;width: 200px;border:solid black 5px;border-radius: 10px;margin-bottom: 30px;">Contact Us</button>
+    
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    
+    <div class="popup" id="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>Contact Us</h2>
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+        </div>
+        <button onclick="submitContact()">Submit</button>
+    </div>
+</div>
 
 <div class="signin">
     <div>
@@ -517,7 +568,52 @@
         }
     }
     </script>
+     <script>
+      function buyPhoto(title) {
+          alert(`You have purchased ${title}`);
+      }
 
+      function sellPhoto() {
+          const title = document.getElementById('title').value;
+          const price = document.getElementById('price').value;
+          const image = document.getElementById('image').value;
+          
+          if (title && price && image) {
+              const photoList = document.getElementById('photoList');
+              const newCard = document.createElement('div');
+              newCard.classList.add('card');
+              newCard.innerHTML = `
+                  <img src="${image}" alt="${title}">
+                  <h3>${title}</h3>
+                  <p>$${price}</p>
+                  <button class="button" onclick="buyPhoto('${title}')">Buy</button>
+              `;
+              photoList.appendChild(newCard);
+          }
+      }
+  </script>
+<script>
+  function openPopup() {
+      document.getElementById('popup').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+  }
+  
+  function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+  }
+  
+  function submitComment() {
+      let comment = document.getElementById('comment').value;
+      if (comment.trim() !== "") {
+          alert("Comment submitted: " + comment);
+          document.getElementById('comment').value = "";
+          closePopup();
+      } else {
+          alert("Please enter a comment before submitting.");
+      }
+  }
+</script>
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
